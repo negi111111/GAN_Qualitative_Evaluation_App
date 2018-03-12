@@ -22,7 +22,7 @@ sub header{
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=UTF-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<TITLE>DEIM2018</TITLE>
+<TITLE>GAN Eval</TITLE>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -34,4 +34,3 @@ EOF
 sub tail{
 	print "</div></section></body></HTML>\n\n";
 }
-

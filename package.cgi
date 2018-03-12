@@ -35,7 +35,7 @@ sub GetNumber{
 	my %path;
 	if($#target>1){
 		my $k="";
-		for(my $i=0;$i<=$#target;$i++){	
+		for(my $i=0;$i<=$#target;$i++){
 			if($i%2==1){
 				$path{$target[$i]}=0;
 			}else{
@@ -52,7 +52,7 @@ sub PostNumber{
 	my %path;
 	if($#target>0){
 		my $k="";
-		for(my $i=0;$i<=$#target;$i++){	
+		for(my $i=0;$i<=$#target;$i++){
 			if($i%2==0){
 				$path{$target[$i]}=0;
 			}else{
@@ -67,7 +67,7 @@ sub GetDirList{
 	my @dir_ls;
 	my $main=$base_path;
 	open(IN,"$main/list.txt");
-	while(my $line=<IN>){	
+	while(my $line=<IN>){
 		chop($line);
 		push(@dir_ls,"$main/$line");
 	}
@@ -79,7 +79,7 @@ sub GetDirList2{
 	my @dir_ls;
 	my $main=$_[0];
 	open(IN,"$main/list.txt");
-	while(my $line=<IN>){	
+	while(my $line=<IN>){
 		chop($line);
 		push(@dir_ls,"$main/$line");
 	}
@@ -91,7 +91,7 @@ sub GetList{
 	my @dir_ls;
 	my $main=$_[0];
 	open(IN,"$main/list.txt");
-	while(my $line=<IN>){	
+	while(my $line=<IN>){
 		chop($line);
 		push(@dir_ls,"$main/$line");
 	}
@@ -107,7 +107,7 @@ sub GetImageSrc{
 	$images{result}="$img_dir/result.jpg";
 	$images{result_pc}="$img_dir/result_pc.jpg";
 	$images{param}="$img_dir/param.txt";
-	
+
 	my @styles;
 	my $c=0;
 	my $stylef="$img_dir/style$c.jpg";
@@ -117,7 +117,7 @@ sub GetImageSrc{
 		$stylef="$img_dir/style$c.jpg";
 	}
 	$images{styles}=\@styles;
-	
+
 	my $process=0;
 	if(-e $images{result}){
 		$images{status}="complete";
@@ -203,20 +203,20 @@ sub header{
 <HEAD>
 <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=UTF-8">
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<TITLE>DEIM2018食事画像ユーザー評価システム</TITLE>
+<TITLE>食事画像ユーザー評価システム</TITLE>
 
 </HEAD>
 <body style="background-color:#EDF7FF;">
 <div id=header  Align="center">
 <div class=opening><br>
 <img src=logo.png width=200px style="display:inline-block;vertical-align:middle;">
-<p>DEIM2018 生成画像ユーザー評価システム&nbsp;&nbsp;
+<p>生成画像ユーザー評価システム&nbsp;&nbsp;
 
 </p>
 </div>
 <div class="menu"></div>
 <section id="sample-before" class="samples">
-<h2>$_[0]</h2>	
+<h2>$_[0]</h2>
 EOF
 }
 sub tail{
@@ -224,5 +224,3 @@ sub tail{
 }
 
 1;
-
-
