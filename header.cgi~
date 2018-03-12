@@ -1,0 +1,37 @@
+#!/usr/bin/perl --
+use strict;
+use Encode;
+use Math::Trig;
+use encoding 'utf-8';
+
+my $mode=0;
+my $key="";
+if($#ARGV>=0){
+	$mode=$ARGV[0];
+}
+if($#ARGV>=1){
+	$key=$ARGV[1];
+}
+if($mode==0){&header($key);}
+if($mode==1){&tail();}
+
+sub header{
+	print << "EOF";
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<TITLE>DEIM2018</TITLE>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="menu.js"></script>
+
+</HEAD>
+EOF
+}
+sub tail{
+	print "</div></section></body></HTML>\n\n";
+}
+
